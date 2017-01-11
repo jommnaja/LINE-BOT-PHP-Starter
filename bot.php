@@ -21,6 +21,8 @@ if (!is_null($events['events'])) {
 				$replytext = "หล่อมากๆ ซ้ายยังกะมาริโอ ขวายังกะณเดช";
 			}elseif(strpos($text, 'หล่อ') !== false) {
 				$replytext = "ก็จอมน่ะสิ จะใครล่ะ";
+			}elseif(strpos($text, 'ดำน้ำ') !== false) {
+				$replytext = "คุณต้องการไปดำน้ำที่ไหน";
 			}elseif($text=="คิดถึง"){
 				$replytext = "คิดถึงเหมือนกัน มั่กๆๆๆๆๆ";
 			}else{
