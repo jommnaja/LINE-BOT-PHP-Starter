@@ -33,13 +33,21 @@ if (!is_null($events['events'])) {
 				$type = "location";
 			}elseif(strpos($text, 'plenary') !== false) {
 				$type = "image";
+			}elseif(strpos($text, 'กุนสตรี') !== false) {
+				$type = "sticker";
 			}elseif($text=="คิดถึง"){
 				$replytext = "คิดถึงเหมือนกัน มั่กๆๆๆๆๆ";
 			}else{
 				$replytext = $text.'สิ มาบอกทำไม';
 			}
 
-			if($type=="image"){
+			if($type=="sticker"){
+				$messages = [
+					'type' => $type,
+					'packageId' => '508276',
+					'stickerId' => '1',
+				];
+			}elseif($type=="image"){
 				$messages = [
 					'type' => $type,
 					'originalContentUrl' => 'https://scontent.fbkk2-1.fna.fbcdn.net/v/t31.0-8/14207865_759580270811489_7698392208178314974_o.jpg?oh=e50621dfc90774f7044b23389cd852db&oe=5910C29C',
