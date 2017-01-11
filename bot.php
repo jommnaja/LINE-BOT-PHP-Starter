@@ -44,8 +44,8 @@ if (!is_null($events['events'])) {
 			if($type=="sticker"){
 				$messages = [
 					'type' => $type,
-					'packageId' => 1353176,
-					'stickerId' => 508276,
+					'packageId' => 508276,
+					'stickerId' => 2,
 				];
 			}elseif($type=="image"){
 				$messages = [
