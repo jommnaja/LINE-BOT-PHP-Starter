@@ -31,41 +31,48 @@ if (!is_null($events['events'])) {
 				$replytext = "จัดที่ศูนย์การประชุมแห่งชาติสิริกิติ์ เดินทางด้วย MRT ก็ได้นะ";
 				$title = "งานเที่ยวทั่วไทย ไปทั่วโลก TITF#20";
 				$type = "location";
+			}elseif(strpos($text, 'plenary') !== false) {
+				$type = "image";
 			}elseif($text=="คิดถึง"){
 				$replytext = "คิดถึงเหมือนกัน มั่กๆๆๆๆๆ";
 			}else{
 				$replytext = $text.'สิ มาบอกทำไม';
 			}
-			
-			if($type=="location"){
-				$messages2 = [
+
+			if($type=="image"){
+				$messages = [
+					'type' => $type,
+					'originalContentUrl' => 'https://patamon.pw/orig.jpg',
+					'previewImageUrl' => 'https://patamon.pw/prev.jpg',
+				];
+			}elseif($type=="location"){
+				$messages = [
 					'type' => $type,
 					'title' => $title,
 					'address' => 'ศูนย์การประชุมแห่งชาติสิริกิติ์',
 					'latitude' => 13.723702,
 					'longitude' => 100.559159,
 				];
+			}else{
+				$messages = [
+					'type' => 'text',
+					'text' => $replytext,
+				];				
 			}
-			
-			$messages = [
-				'type' => 'text',
-				'text' => $replytext,
-			];				
-
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
-			if($type=="location"){
+// 			if($type=="location"){
+// 				$data = [
+// 					'replyToken' => $replyToken,
+// 					'messages' => [$messages],
+// 					'messages' => [$messages2],
+// 				];
+// 			}else{
 				$data = [
 					'replyToken' => $replyToken,
 					'messages' => [$messages],
-					'messages' => [$messages2],
 				];
-			}else{
-				$data = [
-					'replyToken' => $replyToken,
-					'messages' => [$messages],
-				];
-			}
+// 			}
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
