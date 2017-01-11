@@ -38,29 +38,34 @@ if (!is_null($events['events'])) {
 			}
 			
 			if($type=="location"){
-				$messages = [
+				$messages2 = [
 					'type' => $type,
-					'text' => $replytext,
 					'title' => $title,
 					'address' => 'ศูนย์การประชุมแห่งชาติสิริกิติ์',
 					'latitude' => 13.723702,
 					'longitude' => 100.559159,
 				];
-			}else{
-				$messages = [
-					'type' => 'text',
-					'text' => $replytext,
-				];
-				
 			}
+			
+			$messages = [
+				'type' => 'text',
+				'text' => $replytext,
+			];				
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
-			$data = [
-				'replyToken' => $replyToken,
-				'messages' => [$messages],
-			];
-				
+			if($type=="location"){
+				$data = [
+					'replyToken' => $replyToken,
+					'messages' => [$messages],
+					'messages' => [$messages2],
+				];
+			}else{
+				$data = [
+					'replyToken' => $replyToken,
+					'messages' => [$messages],
+				];
+			}
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
