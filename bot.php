@@ -17,9 +17,17 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
+			if($text=="จอมหล่อมั้ย"){
+				$replytext = "หล่อมากๆ ซ้ายยังกะมาริโอ ขวายังกะณเดช";
+			}elseif($text=="คิดถึง"){
+				$replytext = "คิดถึงเหมืือนกัน มั่กๆๆๆๆๆ";
+			}else{
+				$replytext = $text.'สิ มาบอกทำไม';
+			}
+			
 			$messages = [
 				'type' => 'text',
-				'text' => $text.'สิ มาบอกทำไม'
+				'text' => $replytext
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
