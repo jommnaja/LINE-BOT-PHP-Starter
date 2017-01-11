@@ -29,6 +29,7 @@ if (!is_null($events['events'])) {
 				$replytext = "มี 100 กว่าบูธ คุณต้องการดูรายชื่อเลย หรือต้องการระบุงบ";
 			}elseif(strpos($text, 'ไหน') !== false) {
 				$replytext = "จัดที่ศูนย์การประชุมแห่งชาติสิริกิติ์ เดินทางด้วย MRT ก็ได้นะ";
+				$title = "งานเที่ยวทั่วไทย ไปทั่วโลก TITF#20";
 				$type = "location";
 			}elseif($text=="คิดถึง"){
 				$replytext = "คิดถึงเหมือนกัน มั่กๆๆๆๆๆ";
@@ -39,7 +40,8 @@ if (!is_null($events['events'])) {
 			if($type=="location"){
 				$messages = [
 					'type' => $type,
-					'title' => $replytext,
+					'text' => $replytext,
+					'title' => $title,
 					'address' => 'ศูนย์การประชุมแห่งชาติสิริกิติ์',
 					'latitude' => 13.723702,
 					'longitude' => 100.559159,
