@@ -25,6 +25,8 @@ if (!is_null($events['events'])) {
 				$replytext = "คุณต้องการไปดำน้ำที่ไหน";
 			}elseif(strpos($text, 'เกาะล้าน') !== false) {
 				$replytext = "มี 100 กว่าบูธ คุณต้องการดูรายชื่อเลย หรือต้องการระบุงบ";
+			}elseif(strpos($text, 'หลีเป๊ะ') !== false) {
+				$replytext = "มี 100 กว่าบูธ คุณต้องการดูรายชื่อเลย หรือต้องการระบุงบ";
 			}elseif($text=="คิดถึง"){
 				$replytext = "คิดถึงเหมือนกัน มั่กๆๆๆๆๆ";
 			}else{
