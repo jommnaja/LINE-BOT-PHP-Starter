@@ -19,8 +19,10 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 			if($text=="จอมหล่อมั้ย"){
 				$replytext = "หล่อมากๆ ซ้ายยังกะมาริโอ ขวายังกะณเดช";
+			}elseif(strpos($text, 'หล่อ') !== false) {
+				$replytext = "ก็จอมน่ะสิ จะใครล่ะ";
 			}elseif($text=="คิดถึง"){
-				$replytext = "คิดถึงเหมืือนกัน มั่กๆๆๆๆๆ";
+				$replytext = "คิดถึงเหมือนกัน มั่กๆๆๆๆๆ";
 			}else{
 				$replytext = $text.'สิ มาบอกทำไม';
 			}
