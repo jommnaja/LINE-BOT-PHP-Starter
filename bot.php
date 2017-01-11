@@ -72,15 +72,18 @@ if (!is_null($events['events'])) {
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			if($type=="template"){
-				$actions = [
-					'type' => 'postback',
+				$actions[] = [
+					'type' => 'message',
 					'label' => 'Buy',
-					'data' => 'action=buy&itemid=123',
+					'text' => 'yes',
+				];				
+				$actions[] = [
+					'type' => 'message',
+					'label' => 'No',
+					'text' => 'no',
 				];				
 				$template = [
-					'type' => 'buttons',
-					'thumbnailImageUrl' => 'https://example.com/bot/images/image.jpg',
-					'title' => 'Menu',
+					'type' => 'confirm',
 					'text' => 'Please select',
 					'actions' => [$actions],
 				];				
