@@ -43,7 +43,32 @@ if (!is_null($events['events'])) {
 				$replytext = $text.'สิ มาบอกทำไม';
 			}
 
-			if($type=="sticker"){
+			// Make a POST Request to Messaging API to reply to sender
+			$url = 'https://api.line.me/v2/bot/message/reply';
+			if($type=="template"){
+				$actions[] = [
+					'type' => 'postback',
+					'label' => 'จัดที่ไหน',
+					'data' => 'message=ไหน',
+				];				
+				$actions[] = [
+					'type' => 'uri',
+					'label' => 'ญี่ปุ่น',
+					'uri' => 'http://patamon.pw',
+				];				
+				$template = [
+					'type' => 'buttons',
+					'thumbnailImageUrl' => 'https://patamon.pw/orig.jpg',
+					'title' => 'สวัสดีค่ะ ฉันช่วยอะไรคุณได้บ้าง',
+					'text' => 'เลือกเมนู หรือพิมพ์ keyword เพื่อค้นหาบูธในงานที่ต้องการ',
+					'actions' => [$actions],
+				];				
+				$messages = [
+					'type' => 'template',
+					'altText' => 'LINE ของคุณเก่าแล้วนะ แต่ยังคุยกันได้ค่ะ',
+					'template' => [$template],
+				];		
+			}elseif($type=="sticker"){
 				$messages = [
 					'type' => $type,
 					'packageId' => 2,
@@ -69,29 +94,6 @@ if (!is_null($events['events'])) {
 					'text' => $replytext,
 				];				
 			}
-			// Make a POST Request to Messaging API to reply to sender
-			$url = 'https://api.line.me/v2/bot/message/reply';
-			if($type=="template"){
-				$actions[] = [
-					'type' => 'message',
-					'label' => 'Buy',
-					'text' => 'yes',
-				];				
-				$actions[] = [
-					'type' => 'message',
-					'label' => 'No',
-					'text' => 'no',
-				];				
-				$template = [
-					'type' => 'confirm',
-					'text' => 'Please select',
-					'actions' => [$actions],
-				];				
-				$messages = [
-					'type' => 'template',
-					'altText' => 'this is a buttons template',
-					'template' => [$template],
-				];				
 // 				$data = [
 // 					'replyToken' => $replyToken,
 // 					'messages' => [$messages],
