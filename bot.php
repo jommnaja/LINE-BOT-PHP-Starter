@@ -102,7 +102,7 @@ if (!is_null($events['events'])) {
 // 			}else{
 				$data = [
 					'replyToken' => $replyToken,
-					'messages' => [$messages],
+					'messages' => $messages,
 				];
 // 			}
 			$post = json_encode($data);
