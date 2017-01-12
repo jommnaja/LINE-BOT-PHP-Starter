@@ -51,11 +51,11 @@ if (!is_null($events['events'])) {
 					'label' => 'จัดที่ไหน',
 					'data' => 'message=ไหน',
 				];				
-				$actions[] = [
-					'type' => 'uri',
-					'label' => 'ญี่ปุ่น',
-					'uri' => 'http://patamon.pw',
-				];				
+// 				$actions[] = [
+// 					'type' => 'uri',
+// 					'label' => 'ญี่ปุ่น',
+// 					'uri' => 'http://patamon.pw',
+// 				];				
 				$template = [
 					'type' => 'buttons',
 					'thumbnailImageUrl' => 'https://patamon.pw/orig.jpg',
