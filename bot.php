@@ -38,12 +38,13 @@ if (!is_null($events['events'])) {
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
+			
 			if($type=="template"){
 				$actions = [
 					[
 					'type' => 'postback',
 					'label' => 'จัดที่ไหน',
-					'text' => 'จัดที่ไหน'
+					'text' => 'จัดที่ไหน',
 						],
 					[
 					'type' => 'postback',
@@ -53,7 +54,6 @@ if (!is_null($events['events'])) {
 					[
 					'type' => 'postback',
 					'label' => 'กิจกรรมวันนี้',
-					'data' => 'message=event',
 					'text' => 'กิจกรรมวันนี้',
 						],
 					[
