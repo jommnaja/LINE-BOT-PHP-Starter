@@ -52,6 +52,7 @@ if (!is_null($events['events'])) {
 					'type' => 'postback',
 					'label' => 'จัดที่ไหน',
 					'data' => 'message=ไหน',
+					'text' => 'จัดที่ไหน'
 						],[
 					'type' => 'postback',
 					'label' => 'เมื่อไหร่',
@@ -61,9 +62,9 @@ if (!is_null($events['events'])) {
 					'label' => 'ทำไม',
 					'data' => 'message=ไม',
 						],[
-					'type' => 'postback',
-					'label' => 'กับใคร',
-					'data' => 'message=ใคร',
+					'type' => 'uri',
+					'label' => 'Facebook งาน',
+					'uri' => 'http://www.facebook.com/titfttaa',
 						]
 				];				
 				$template = [
