@@ -64,6 +64,7 @@ if (!is_null($events['events'])) {
 				];
 				
 			}elseif($type=="sticker"){
+				$message = array();
 				$messages = [
 					'type' => 'text',
 					'text' => $replytext,
@@ -101,7 +102,6 @@ if (!is_null($events['events'])) {
 			$data = [
 				'replyToken' => $replyToken,
 				'messages' => [$messages],
-				'messages' => [$messages2],
 			];
 			
 			$post = json_encode($data);
