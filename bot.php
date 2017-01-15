@@ -58,11 +58,15 @@ if (!is_null($events['events'])) {
 					]
 				];					
 				$columns = [
-					
+					[
 					'title' => 'อ่าวนางออลซีซั่นส์/ลันตาปุรี จ.กระบี่',
 					'text' => 'บูธ CC105 โซน C2',
 					'actions' => $actions,
-					
+					],[
+					'title' => 'อ่าวนางออลซีซั่นส์/ลันตาปุรี จ.กระบี่',
+					'text' => 'บูธ CC105 โซน C2',
+					'actions' => $actions,
+					],
 				];				
 				$template = [
 					'type' => '$type',
