@@ -58,15 +58,15 @@ if (!is_null($events['events'])) {
 					'data' => 'message=ไหร่',
 						],[
 					'type' => 'postback',
-					'label' => 'เมื่อไหร่',
+					'label' => 'ทำไม',
 					'data' => 'message=ไม',
 						],[
 					'type' => 'postback',
-					'label' => 'เมื่อไหร่',
+					'label' => 'กับใคร',
 					'data' => 'message=ใคร',
 						],[
 					'type' => 'postback',
-					'label' => 'เมื่อไหร่',
+					'label' => 'ยังไง',
 					'data' => 'message=ไง',
 						],
 				];				
