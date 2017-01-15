@@ -58,28 +58,29 @@ if (!is_null($events['events'])) {
 				];				
 				$template = [
 					'type' => 'buttons',
-					'thumbnailImageUrl' => 'https://patamon.pw/orig.jpg',
-					'title' => 'สวัสดีค่ะ ฉันช่วยอะไรคุณได้บ้าง',
 					'text' => 'เลือกเมนู หรือพิมพ์ keyword เพื่อค้นหาบูธในงานที่ต้องการ',
 					'actions' => [$actions],
 				];				
 				$messages = [
-					'type' => 'template',
-					'altText' => 'LINE ของคุณเก่าแล้วนะ แต่ยังคุยกันได้ค่ะ',
+					'type' => $type,
+					'altText' => 'โปรดเลือกปุ่ม',
 					'template' => [$template],
-				];		
+				];
+				
 			}elseif($type=="sticker"){
 				$messages = [
 					'type' => $type,
 					'packageId' => 2,
 					'stickerId' => 145,
 				];
+				
 			}elseif($type=="image"){
 				$messages = [
 					'type' => $type,
 					'originalContentUrl' => 'https://scontent.fbkk2-1.fna.fbcdn.net/v/t31.0-8/14207865_759580270811489_7698392208178314974_o.jpg?oh=e50621dfc90774f7044b23389cd852db&oe=5910C29C',
 					'previewImageUrl' => 'https://scontent.fbkk2-1.fna.fbcdn.net/v/t1.0-1/p200x200/14718888_781358575300325_1429275987166647386_n.jpg?oh=6b8ecf2a77c2a452a3feb52b656aafeb&oe=592042DB',
 				];
+				
 			}elseif($type=="location"){
 				$messages = [
 					'type' => $type,
@@ -88,23 +89,20 @@ if (!is_null($events['events'])) {
 					'latitude' => 13.723702,
 					'longitude' => 100.559159,
 				];
+				
 			}else{
 				$messages = [
 					'type' => 'text',
 					'text' => $replytext,
-				];				
+				];	
+				
 			}
-// 				$data = [
-// 					'replyToken' => $replyToken,
-// 					'messages' => [$messages],
-// 					'messages' => [$messages2],
-// 				];
-// 			}else{
-				$data = [
-					'replyToken' => $replyToken,
-					'messages' => [$messages],
-				];
-// 			}
+
+			$data = [
+				'replyToken' => $replyToken,
+				'messages' => [$messages],
+			];
+			
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
