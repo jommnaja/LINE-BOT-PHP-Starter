@@ -54,6 +54,7 @@ if (!is_null($events['events'])) {
 					[
 					'type' => 'postback',
 					'label' => 'กิจกรรมวันนี้',
+					'data' => 'message=ไม',
 					'text' => 'กิจกรรมวันนี้'
 						],
 					[
