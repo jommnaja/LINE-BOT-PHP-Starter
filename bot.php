@@ -68,10 +68,6 @@ if (!is_null($events['events'])) {
 					'type' => 'postback',
 					'label' => 'เมื่อไหร่',
 					'data' => 'message=ไง',
-						],[
-					'type' => 'postback',
-					'label' => 'เมื่อไหร่',
-					'data' => 'message=ไฮ',
 						]
 				];				
 				$template = [
