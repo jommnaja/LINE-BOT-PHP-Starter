@@ -56,7 +56,23 @@ if (!is_null($events['events'])) {
 					'type' => 'postback',
 					'label' => 'เมื่อไหร่',
 					'data' => 'message=ไหร่',
-						],
+						],[
+					'type' => 'postback',
+					'label' => 'เมื่อไหร่',
+					'data' => 'message=ไหร่',
+						],[
+					'type' => 'postback',
+					'label' => 'เมื่อไหร่',
+					'data' => 'message=ไหร่',
+						],[
+					'type' => 'postback',
+					'label' => 'เมื่อไหร่',
+					'data' => 'message=ไหร่',
+						],[
+					'type' => 'postback',
+					'label' => 'เมื่อไหร่',
+					'data' => 'message=ไหร่',
+						]
 				];				
 				$template = [
 					'type' => 'buttons',
