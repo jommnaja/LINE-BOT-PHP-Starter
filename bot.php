@@ -94,20 +94,15 @@ if (!is_null($events['events'])) {
 				
 			}else{
 				$messages = [
-					[
 					'type' => 'text',
 					'text' => $replytext,
-						],[
-					'type' => 'text',
-					'text' => $replytext,
-						],
 				];	
 				
 			}
 
 			$data = [
 				'replyToken' => $replyToken,
-				'messages' => [$messages],
+				'messages' => $messages,
 			];
 			
 			$post = json_encode($data);
