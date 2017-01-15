@@ -17,11 +17,7 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
-			if($text=="จอมหล่อมั้ย"){
-				$replytext = "หล่อมากๆ ซ้ายยังกะมาริโอ ขวายังกะณเดช";
-			}elseif(strpos($text, 'หล่อ') !== false) {
-				$replytext = "ก็จอมน่ะสิ จะใครล่ะ";
-			}elseif(strpos($text, 'ดำน้ำ') !== false) {
+			if(strpos($text, 'ดำน้ำ') !== false) {
 				$replytext = "คุณต้องการไปดำน้ำที่ไหน";
 			}elseif(strpos($text, 'เกาะล้าน') !== false) {
 				$replytext = "มี 100 กว่าบูธ คุณต้องการดูรายชื่อเลย หรือต้องการระบุงบ";
@@ -36,12 +32,8 @@ if (!is_null($events['events'])) {
 			}elseif(strpos($text, 'กุนสตรี') !== false) {
 				$type = "sticker";
 				$replytext = "ว่าเป็นหมูหรอ";
-			}elseif(strpos($text, 'สวัสดี') !== false) {
-				$type = "template";
-			}elseif($text=="คิดถึง"){
-				$replytext = "คิดถึงเหมือนกัน มั่กๆๆๆๆๆ";
 			}else{
-				$replytext = $text.'สิ มาบอกทำไม';
+				$type = "template";
 			}
 
 			// Make a POST Request to Messaging API to reply to sender
@@ -65,16 +57,16 @@ if (!is_null($events['events'])) {
 					'type' => 'uri',
 					'label' => 'TITF Facebook Fan Page',
 					'uri' => 'http://www.facebook.com/ttaatitf',
-						]
+						],
 				];				
 				$template = [
 					'type' => 'buttons',
-					'text' => 'พิมพ์ keyword กิจกรรมหรือสถานที่เที่ยวเพื่อค้นหาบูธภายในงาน',
+					'text' => 'กรุณาระบุ keyword',
 					'actions' => $actions,
 				];				
 				$messages = [
 					'type' => $type,
-					'altText' => 'โปรดเลือกปุ่ม',
+					'altText' => 'Please type keyword',
 					'template' => $template,
 				];
 				$data = [
@@ -112,11 +104,16 @@ if (!is_null($events['events'])) {
 				
 			}elseif($type=="location"){
 				$messages = [
+					[
 					'type' => $type,
 					'title' => $title,
 					'address' => 'ศูนย์การประชุมแห่งชาติสิริกิติ์',
 					'latitude' => 13.723702,
 					'longitude' => 100.559159,
+						],[
+					'type' => 'text',
+					'text' => $replytext,
+						]
 				];
 				$data = [
 					'replyToken' => $replyToken,
