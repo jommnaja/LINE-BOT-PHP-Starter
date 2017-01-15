@@ -71,11 +71,11 @@ if (!is_null($events['events'])) {
 				$messages = [
 					'type' => 'template',
 					'altText' => 'โปรดเลือกปุ่ม',
-					'template' => [$template],
+					'template' => $template,
 				];
 				$data = [
 					'replyToken' => $replyToken,
-					'messages' => [$messages],
+					'messages' => $messages,
 				];
 				
 			}elseif($type=="template"){
