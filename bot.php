@@ -110,11 +110,17 @@ if (!is_null($events['events'])) {
 				
 			}elseif($type=="location"){
 				$messages = [
+					[
+					'type' => 'text',
+					'text' => $replytext,
+					],
+					[
 					'type' => $type,
 					'title' => $title,
 					'address' => 'ศูนย์การประชุมแห่งชาติสิริกิติ์',
 					'latitude' => 13.723702,
 					'longitude' => 100.559159,
+						]
 				];
 				$data = [
 					'replyToken' => $replyToken,
