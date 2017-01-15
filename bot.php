@@ -41,39 +41,37 @@ if (!is_null($events['events'])) {
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			
 			if($type=="carousel"){
-				$actions1 = [
+				$actions = [
 					[
 					'type' => 'uri',
 					'label' => 'โปรโมชั่น',
 					'uri' => 'http://www.titf-ttaa.com',
-						],
-					[
+					],[
 					'type' => 'postback',
 					'label' => 'ดูผังบูธ',
 					'text' => 'plenary',
 					'data' => 'message=ไหร่',
-						],
-					[
+					],[
 					'type' => 'uri',
 					'label' => 'ดูรายละเอียด',
 					'uri' => 'http://www.titf-ttaa.com',
-						]
+					]
 				];					
 				$columns = [
 					[
 					'title' => 'อ่าวนางออลซีซั่นส์/ลันตาปุรี จ.กระบี่',
 					'text' => 'บูธ CC105 โซน C2',
-					'actions' => $actions1,
-						],
+					'actions' => $actions,
+					]
 				];				
 				$template = [
 					'type' => '$type',
-					'columns' => $columns,
+					'columns' => [$columns],
 				];				
 				$messages = [
 					'type' => 'template',
 					'altText' => 'โปรดเลือกปุ่ม',
-					'template' => $template,
+					'template' => [$template],
 				];
 				$data = [
 					'replyToken' => $replyToken,
