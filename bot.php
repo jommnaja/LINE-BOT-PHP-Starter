@@ -34,12 +34,10 @@ if (!is_null($events['events'])) {
 			}elseif(strpos($text, 'กุนสตรี') !== false) {
 				$type = "sticker";
 				$replytext = "ว่าเป็นหมูหรอ";
-			}elseif(strpos($text, 'ประเมิน') !== false) {
-				$type = "template";
 			}elseif($text=="คิดถึง"){
 				$replytext = "คิดถึงเหมือนกัน มั่กๆๆๆๆๆ";
 			}else{
-				$replytext = $text.'สิ มาบอกทำไม';
+				$type = "template";
 			}
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
