@@ -35,6 +35,7 @@ if (!is_null($events['events'])) {
 				$type = "image";
 			}elseif(strpos($text, 'กุนสตรี') !== false) {
 				$type = "sticker";
+				$replytext = "ว่าเป็นหมูหรอ";
 			}elseif(strpos($text, 'ประเมิน') !== false) {
 				$type = "template";
 			}elseif($text=="คิดถึง"){
@@ -68,6 +69,10 @@ if (!is_null($events['events'])) {
 					'packageId' => 2,
 					'stickerId' => 145,
 				];
+				$messages = [
+					'type' => 'text',
+					'text' => $replytext,
+				];	
 				
 			}elseif($type=="image"){
 				$messages = [
