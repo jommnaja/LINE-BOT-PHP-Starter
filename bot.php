@@ -57,10 +57,6 @@ if (!is_null($events['events'])) {
 					'label' => 'แผนผังงาน',
 					'text' => 'แผนผังงาน',
 						],[
-					'type' => 'postback',
-					'label' => 'กิจกรรมวันนี้',
-					'text' => 'กิจกรรมวันนี้',
-						],[
 					'type' => 'uri',
 					'label' => 'TITF Facebook Fan Page',
 					'uri' => 'http://www.facebook.com/ttaatitf',
@@ -68,7 +64,7 @@ if (!is_null($events['events'])) {
 				];				
 				$template = [
 					'type' => 'buttons',
-					'text' => 'TITF#20 สวัสดีค่ะ พิมพ์ keyword กิจกรรมหรือสถานที่เที่ยวเพื่อค้นหาบูธภายในงาน เช่น ดำน้ำ ฮอกไกโด ฯลฯ',
+					'text' => 'พิมพ์ keyword กิจกรรมหรือสถานที่เที่ยวเพื่อค้นหาบูธภายในงาน',
 					'actions' => $actions,
 				];				
 				$messages = [
