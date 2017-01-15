@@ -43,92 +43,92 @@ if (!is_null($events['events'])) {
 			if($type=="carousel"){
 				$actions1 = [
 					[
+					'type' => 'uri',
+					'label' => 'โปรโมชั่น',
+					'uri' => 'http://www.titf-ttaa.com',
+						],
+					[
 					'type' => 'postback',
-					'label' => 'ดูรูป',
-					'text' => 'อ่าวนางออลซีซั่นส์/ลันตาปุรี',
-					'data' => 'message=ไหน',
-						],[
-					'type' => 'postback',
-					'label' => 'เกี่ยวกับ',
-					'text' => 'อนันต บุรินทร์ รีสอร์ท',
+					'label' => 'ดูผังบูธ',
+					'text' => 'plenary',
 					'data' => 'message=ไหร่',
-						],[
-					'type' => 'postback',
-					'label' => 'ดูเว็บ',
-					'text' => 'ไร่เลย์ วิวพอยท์',
-					'data' => 'message=ไหร่',
+						],
+					[
+					'type' => 'uri',
+					'label' => 'ดูรายละเอียด',
+					'uri' => 'http://www.titf-ttaa.com',
 						]
 				];				
 				$actions2 = [
 					[
+					'type' => 'uri',
+					'label' => 'โปรโมชั่น',
+					'uri' => 'http://www.titf-ttaa.com',
+						],
+					[
 					'type' => 'postback',
-					'label' => 'ดูรูป',
-					'text' => 'อ่าวนางออลซีซั่นส์/ลันตาปุรี',
-					'data' => 'message=ไหน',
-						],[
-					'type' => 'postback',
-					'label' => 'เกี่ยวกับ',
-					'text' => 'อนันต บุรินทร์ รีสอร์ท',
+					'label' => 'ดูผังบูธ',
+					'text' => 'plenary',
 					'data' => 'message=ไหร่',
-						],[
-					'type' => 'postback',
-					'label' => 'ดูเว็บ',
-					'text' => 'ไร่เลย์ วิวพอยท์',
-					'data' => 'message=ไหร่',
+						],
+					[
+					'type' => 'uri',
+					'label' => 'ดูรายละเอียด',
+					'uri' => 'http://www.titf-ttaa.com',
 						]
 				];				
 				$actions3 = [
 					[
+					'type' => 'uri',
+					'label' => 'โปรโมชั่น',
+					'uri' => 'http://www.titf-ttaa.com',
+						],
+					[
 					'type' => 'postback',
-					'label' => 'ดูรูป',
-					'text' => 'อ่าวนางออลซีซั่นส์/ลันตาปุรี',
-					'data' => 'message=ไหน',
-						],[
-					'type' => 'postback',
-					'label' => 'เกี่ยวกับ',
-					'text' => 'อนันต บุรินทร์ รีสอร์ท',
+					'label' => 'ดูผังบูธ',
+					'text' => 'plenary',
 					'data' => 'message=ไหร่',
-						],[
-					'type' => 'postback',
-					'label' => 'ดูเว็บ',
-					'text' => 'ไร่เลย์ วิวพอยท์',
-					'data' => 'message=ไหร่',
+						],
+					[
+					'type' => 'uri',
+					'label' => 'ดูรายละเอียด',
+					'uri' => 'http://www.titf-ttaa.com',
 						]
 				];				
 				$actions4 = [
 					[
+					'type' => 'uri',
+					'label' => 'โปรโมชั่น',
+					'uri' => 'http://www.titf-ttaa.com',
+						],
+					[
 					'type' => 'postback',
-					'label' => 'ดูรูป',
-					'text' => 'อ่าวนางออลซีซั่นส์/ลันตาปุรี',
-					'data' => 'message=ไหน',
-						],[
-					'type' => 'postback',
-					'label' => 'เกี่ยวกับ',
-					'text' => 'อนันต บุรินทร์ รีสอร์ท',
+					'label' => 'ดูผังบูธ',
+					'text' => 'plenary',
 					'data' => 'message=ไหร่',
-						],[
-					'type' => 'postback',
-					'label' => 'ดูเว็บ',
-					'text' => 'ไร่เลย์ วิวพอยท์',
-					'data' => 'message=ไหร่',
+						],
+					[
+					'type' => 'uri',
+					'label' => 'ดูรายละเอียด',
+					'uri' => 'http://www.titf-ttaa.com',
 						]
 				];				
 				$actions5 = [
 					[
+					'type' => 'uri',
+					'label' => 'โปรโมชั่น',
+					'uri' => 'http://www.titf-ttaa.com',
+						],
+					[
 					'type' => 'postback',
-					'label' => 'ดูรูป',
-					'text' => 'อ่าวนางออลซีซั่นส์/ลันตาปุรี',
-					'data' => 'message=ไหน',
-						],[
-					'type' => 'postback',
-					'label' => 'เกี่ยวกับ',
-					'text' => 'อนันต บุรินทร์ รีสอร์ท',
+					'label' => 'ดูผังบูธ',
+					'text' => 'plenary',
 					'data' => 'message=ไหร่',
-						],[
-					'type' => 'postback',
-					'label' => 'ดูเว็บ',
-					'text' => 'ไร่เลย์ วิวพอยท์',
-					'data' => 'message=ไหร่',
+						],
+					[
+					'type' => 'uri',
+					'label' => 'ดูรายละเอียด',
+					'uri' => 'http://www.titf-ttaa.com',
 						]
 				];				
 				$columns = [
