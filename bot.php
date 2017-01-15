@@ -23,8 +23,8 @@ if (!is_null($events['events'])) {
 				$replytext = "คุณต้องการไปดำน้ำที่ไหน";
 			}elseif(strpos($text, 'เกาะล้าน') !== false) {
 				$replytext = "มี 100 กว่าบูธ คุณต้องการดูรายชื่อเลย หรือต้องการระบุงบ";
-			}elseif(strpos($text, 'หลีเป๊ะ') !== false) {
-				$replytext = "มี 100 กว่าบูธ คุณต้องการดูรายชื่อเลย หรือต้องการระบุงบ";
+			}elseif(strpos($text, 'กระบี่') !== false) {
+				$type = "carousel";
 			}elseif(strpos($text, 'ไหน') !== false) {
 				$replytext = "จัดที่ศูนย์การประชุมแห่งชาติสิริกิติ์ เดินทางด้วย MRT ก็ได้นะ";
 				$title = "งานเที่ยวทั่วไทย ไปทั่วโลก TITF#20";
@@ -34,14 +34,60 @@ if (!is_null($events['events'])) {
 			}elseif(strpos($text, 'กุนสตรี') !== false) {
 				$type = "sticker";
 				$replytext = "ว่าเป็นหมูหรอ";
-			}elseif($text=="คิดถึง"){
-				$replytext = "คิดถึงเหมือนกัน มั่กๆๆๆๆๆ";
 			}else{
 				$type = "template";
 			}
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
-			if($type=="template"){
+			
+			if($type=="carousel"){
+				$actions = [
+					[
+					'type' => 'postback',
+					'label' => 'อ่าวนางออลซีซั่นส์/ลันตาปุรี จ.กระบี่',
+					'text' => 'อ่าวนางออลซีซั่นส์/ลันตาปุรี',
+					'data' => 'message=ไหน',
+						],[
+					'type' => 'postback',
+					'label' => 'อนันต บุรินทร์ รีสอร์ท จ. กระบี่',
+					'text' => 'อนันต บุรินทร์ รีสอร์ท',
+					'data' => 'message=ไหร่',
+						],[
+					'type' => 'postback',
+					'label' => 'ไร่เลย์ วิวพอยท์ รีสอร์ท จ. กระบี่',
+					'text' => 'ไร่เลย์ วิวพอยท์',
+					'data' => 'message=ไหร่',
+						],[
+					'type' => 'postback',
+					'label' => 'โรงแรมอารีธารา รีสอร์ท กระบี่',
+					'text' => 'อารีธารา',
+					'data' => 'message=ไหร่',
+						],[
+					'type' => 'postback',
+					'label' => 'โรงแรมอาภาสรี กระบี่',
+					'text' => 'อาภาสรี',
+					'data' => 'message=ไหร่',
+						]
+				];				
+				$columns = [
+					'text' => 'เลือกเมนู หรือพิมพ์ keyword เพื่อค้นหาบูธในงานที่ต้องการ',
+					'actions' => $actions,
+				];				
+				$template = [
+					'type' => '$type',
+					'columns' => $columns,
+				];				
+				$messages = [
+					'type' => 'template',
+					'altText' => 'โปรดเลือกปุ่ม',
+					'template' => $template,
+				];
+				$data = [
+					'replyToken' => $replyToken,
+					'messages' => [$messages],
+				];
+				
+			}elseif($type=="template"){
 				$actions = [
 					[
 					'type' => 'postback',
