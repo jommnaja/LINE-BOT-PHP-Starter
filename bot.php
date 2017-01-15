@@ -57,6 +57,22 @@ if (!is_null($events['events'])) {
 					'uri' => 'http://www.titf-ttaa.com',
 					]
 				];					
+				$actions2 = [
+					[
+					'type' => 'uri',
+					'label' => 'โปรโมชั่น',
+					'uri' => 'http://www.titf-ttaa.com',
+					],[
+					'type' => 'postback',
+					'label' => 'ดูผังบูธ',
+					'text' => 'plenary',
+					'data' => 'message=ไหร่',
+					],[
+					'type' => 'uri',
+					'label' => 'ดูรายละเอียด',
+					'uri' => 'http://www.titf-ttaa.com',
+					]
+				];	
 				$columns = [
 					[
 					'title' => 'อ่าวนางออลซีซั่นส์/ลันตาปุรี จ.กระบี่',
@@ -65,7 +81,7 @@ if (!is_null($events['events'])) {
 					],[
 					'title' => 'อ่าวนางออลซีซั่นส์/ลันตาปุรี จ.กระบี่',
 					'text' => 'บูธ CC105 โซน C2',
-					'actions' => $actions,
+					'actions' => $actions2,
 					],
 				];				
 				$template = [
