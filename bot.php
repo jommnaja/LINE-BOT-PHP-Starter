@@ -44,10 +44,22 @@ if (!is_null($events['events'])) {
 					'type' => 'postback',
 					'label' => 'จัดที่ไหน',
 					'text' => 'จัดที่ไหน'
-						],[
+						],
+					[
 					'type' => 'postback',
 					'label' => 'แผนผังงาน',
 					'text' => 'แผนผังงาน',
+						],
+					[
+					'type' => 'postback',
+					'label' => 'กิจกรรมวันนี้',
+					'data' => 'message=event',
+					'text' => 'กิจกรรมวันนี้',
+						],
+					[
+					'type' => 'uri',
+					'label' => 'TITF Facebook Fan Page',
+					'uri' => 'http://www.facebook.com/ttaatitf',
 						],
 				];				
 				$template = [
