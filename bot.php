@@ -1,6 +1,5 @@
 <?php
 $access_token = 'lsiTEin1tkWRo2GJIExuXGYIinMFo1HJOwPwGQj1YLuose/ztMEWXr4vKDVCXwCbGrRbpwCWwk8FNjCEuC0lijP+x4+lnFq/bI20uZat6hAZuxqX4GPhvggRqWrsXcl4IOr4et7MCDWfBzgCA9jLOwdB04t89/1O/w1cDnyilFU=';
-
 // Get POST body content
 $content = file_get_contents('php://input');
 // Parse JSON
@@ -15,9 +14,12 @@ if (!is_null($events['events'])) {
 			$text = $event['message']['text'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
-
 			// Build message to reply back
-			if(strpos($text, 'ดำน้ำ') !== false) {
+			if($text=="จอมหล่อมั้ย"){
+				$replytext = "หล่อมากๆ ซ้ายยังกะมาริโอ ขวายังกะณเดช";
+			}elseif(strpos($text, 'หล่อ') !== false) {
+				$replytext = "ก็จอมน่ะสิ จะใครล่ะ";
+			}elseif(strpos($text, 'ดำน้ำ') !== false) {
 				$replytext = "คุณต้องการไปดำน้ำที่ไหน";
 			}elseif(strpos($text, 'เกาะล้าน') !== false) {
 				$replytext = "มี 100 กว่าบูธ คุณต้องการดูรายชื่อเลย หรือต้องการระบุงบ";
@@ -32,31 +34,33 @@ if (!is_null($events['events'])) {
 			}elseif(strpos($text, 'กุนสตรี') !== false) {
 				$type = "sticker";
 				$replytext = "ว่าเป็นหมูหรอ";
-			}else{
+			}elseif(strpos($text, 'ประเมิน') !== false) {
 				$type = "template";
+			}elseif($text=="คิดถึง"){
+				$replytext = "คิดถึงเหมือนกัน มั่กๆๆๆๆๆ";
+			}else{
+				$replytext = $text.'สิ มาบอกทำไม';
 			}
-
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
-			
 			if($type=="template"){
 				$actions = [
 					[
 					'type' => 'postback',
 					'label' => 'จัดที่ไหน',
-					'text' => 'จัดที่ไหน'
+					'data' => 'message=ไหน',
 						],[
 					'type' => 'postback',
-					'label' => 'แผนผังงาน',
-					'text' => 'แผนผังงาน',
+					'label' => 'เมื่อไหร่',
+					'data' => 'message=ไหร่',
 						],[
 					'type' => 'postback',
-					'label' => 'ทำไม',
-					'data' => 'message=ไม',
+					'label' => 'เมื่อไหร่',
+					'data' => 'message=ไหร่',
 						],[
-					'type' => 'uri',
-					'label' => 'Facebook งาน',
-					'uri' => 'http://www.facebook.com/titfttaa',
+					'type' => 'postback',
+					'label' => 'เมื่อไหร่',
+					'data' => 'message=ไหร่',
 						]
 				];				
 				$template = [
@@ -104,21 +108,15 @@ if (!is_null($events['events'])) {
 				
 			}elseif($type=="location"){
 				$messages = [
-					[
 					'type' => $type,
 					'title' => $title,
 					'address' => 'ศูนย์การประชุมแห่งชาติสิริกิติ์',
 					'latitude' => 13.723702,
 					'longitude' => 100.559159,
-						],
-					[
-					'type' => 'text',
-					'text' => $replytext,
-						],
 				];
 				$data = [
 					'replyToken' => $replyToken,
-					'messages' => $messages,
+					'messages' => [$messages],
 				];
 				
 			}else{
@@ -134,7 +132,6 @@ if (!is_null($events['events'])) {
 			
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
-
 			$ch = curl_init($url);
 			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -143,7 +140,6 @@ if (!is_null($events['events'])) {
 			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 			$result = curl_exec($ch);
 			curl_close($ch);
-
 			echo $result . "\r\n";
 		}
 	}
