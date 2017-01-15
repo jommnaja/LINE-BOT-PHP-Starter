@@ -58,17 +58,18 @@ if (!is_null($events['events'])) {
 					'text' => 'แผนผังงาน',
 						],[
 					'type' => 'postback',
-					'label' => 'ทำไม',
-					'data' => 'message=ไม',
+					'label' => 'กิจกรรมวันนี้',
+					'text' => 'กิจกรรมวันนี้',
 						],[
 					'type' => 'uri',
-					'label' => 'Facebook งาน',
-					'uri' => 'http://www.facebook.com/titfttaa',
+					'label' => 'TITF Facebook Fan Page',
+					'uri' => 'http://www.facebook.com/ttaatitf',
 						]
 				];				
 				$template = [
 					'type' => 'buttons',
-					'text' => 'เลือกเมนู หรือพิมพ์ keyword เพื่อค้นหาบูธในงานที่ต้องการ',
+					'title' => 'TITF#20 สวัสดีค่ะ',
+					'text' => 'คุณสามารถพิมพ์ถาม Chatbot เรื่องต่อไปนี้ หรือพิมพ์ keyword เกี่ยวกับกิจกรรมหรือสถานที่ท่องเที่ยวเพื่อค้นหาบูธภายในงาน เช่น ดำน้ำ ฮอกไกโด ฯลฯ',
 					'actions' => $actions,
 				];				
 				$messages = [
