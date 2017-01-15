@@ -50,10 +50,6 @@ if (!is_null($events['events'])) {
 					'type' => 'postback',
 					'label' => 'จัดที่ไหน',
 					'data' => 'message=ไหน',
-				],[
-					'type' => 'uri',
-					'label' => 'ญี่ปุ่น',
-					'uri' => 'http://patamon.pw',
 				];				
 				$template = [
 					'type' => 'buttons',
