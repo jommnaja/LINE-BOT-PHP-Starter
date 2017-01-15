@@ -48,19 +48,25 @@ if (!is_null($events['events'])) {
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			if($type=="template"){
 				$actions = [
+					[
 					'type' => 'postback',
 					'label' => 'จัดที่ไหน',
 					'data' => 'message=ไหน',
+						],[
+					'type' => 'postback',
+					'label' => 'เมื่อไหร่',
+					'data' => 'message=ไหร่',
+						],
 				];				
 				$template = [
 					'type' => 'buttons',
 					'text' => 'เลือกเมนู หรือพิมพ์ keyword เพื่อค้นหาบูธในงานที่ต้องการ',
-					'actions' => [$actions],
+					'actions' => $actions,
 				];				
 				$messages = [
 					'type' => $type,
 					'altText' => 'โปรดเลือกปุ่ม',
-					'template' => [$template],
+					'template' => $template,
 				];
 				
 			}elseif($type=="sticker"){
