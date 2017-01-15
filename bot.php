@@ -72,8 +72,8 @@ if (!is_null($events['events'])) {
 			}elseif($type=="image"){
 				$messages = [
 					'type' => $type,
-					'originalContentUrl' => 'https://scontent.fbkk2-1.fna.fbcdn.net/v/t31.0-8/14207865_759580270811489_7698392208178314974_o.jpg?oh=e50621dfc90774f7044b23389cd852db&oe=5910C29C',
-					'previewImageUrl' => 'https://scontent.fbkk2-1.fna.fbcdn.net/v/t1.0-1/p200x200/14718888_781358575300325_1429275987166647386_n.jpg?oh=6b8ecf2a77c2a452a3feb52b656aafeb&oe=592042DB',
+					'originalContentUrl' => 'https://patamon.pw/orig.jpg',
+					'previewImageUrl' => 'https://patamon.pw/prev.jpg',
 				];
 				
 			}elseif($type=="location"){
