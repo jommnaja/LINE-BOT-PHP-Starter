@@ -36,7 +36,7 @@ if (!is_null($events['events'])) {
 			}elseif(strpos($text, 'กุนสตรี') !== false) {
 				$type = "sticker";
 				$replytext = "ว่าเป็นหมูหรอ";
-			}elseif(strpos($text, 'ประเมิน') !== false) {
+			}elseif(strpos($text, 'สวัสดี') !== false) {
 				$type = "template";
 			}elseif($text=="คิดถึง"){
 				$replytext = "คิดถึงเหมือนกัน มั่กๆๆๆๆๆ";
@@ -68,7 +68,7 @@ if (!is_null($events['events'])) {
 					'type' => 'postback',
 					'label' => 'เมื่อไหร่',
 					'data' => 'message=ไง',
-						]
+						],
 				];				
 				$template = [
 					'type' => 'buttons',
