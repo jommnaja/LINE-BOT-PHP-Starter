@@ -41,7 +41,79 @@ if (!is_null($events['events'])) {
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			
 			if($type=="carousel"){
-				$actions = [
+				$actions1 = [
+					[
+					'type' => 'postback',
+					'label' => 'ดูรูป',
+					'text' => 'อ่าวนางออลซีซั่นส์/ลันตาปุรี',
+					'data' => 'message=ไหน',
+						],[
+					'type' => 'postback',
+					'label' => 'เกี่ยวกับ',
+					'text' => 'อนันต บุรินทร์ รีสอร์ท',
+					'data' => 'message=ไหร่',
+						],[
+					'type' => 'postback',
+					'label' => 'ดูเว็บ',
+					'text' => 'ไร่เลย์ วิวพอยท์',
+					'data' => 'message=ไหร่',
+						]
+				];				
+				$actions2 = [
+					[
+					'type' => 'postback',
+					'label' => 'ดูรูป',
+					'text' => 'อ่าวนางออลซีซั่นส์/ลันตาปุรี',
+					'data' => 'message=ไหน',
+						],[
+					'type' => 'postback',
+					'label' => 'เกี่ยวกับ',
+					'text' => 'อนันต บุรินทร์ รีสอร์ท',
+					'data' => 'message=ไหร่',
+						],[
+					'type' => 'postback',
+					'label' => 'ดูเว็บ',
+					'text' => 'ไร่เลย์ วิวพอยท์',
+					'data' => 'message=ไหร่',
+						]
+				];				
+				$actions3 = [
+					[
+					'type' => 'postback',
+					'label' => 'ดูรูป',
+					'text' => 'อ่าวนางออลซีซั่นส์/ลันตาปุรี',
+					'data' => 'message=ไหน',
+						],[
+					'type' => 'postback',
+					'label' => 'เกี่ยวกับ',
+					'text' => 'อนันต บุรินทร์ รีสอร์ท',
+					'data' => 'message=ไหร่',
+						],[
+					'type' => 'postback',
+					'label' => 'ดูเว็บ',
+					'text' => 'ไร่เลย์ วิวพอยท์',
+					'data' => 'message=ไหร่',
+						]
+				];				
+				$actions4 = [
+					[
+					'type' => 'postback',
+					'label' => 'ดูรูป',
+					'text' => 'อ่าวนางออลซีซั่นส์/ลันตาปุรี',
+					'data' => 'message=ไหน',
+						],[
+					'type' => 'postback',
+					'label' => 'เกี่ยวกับ',
+					'text' => 'อนันต บุรินทร์ รีสอร์ท',
+					'data' => 'message=ไหร่',
+						],[
+					'type' => 'postback',
+					'label' => 'ดูเว็บ',
+					'text' => 'ไร่เลย์ วิวพอยท์',
+					'data' => 'message=ไหร่',
+						]
+				];				
+				$actions5 = [
 					[
 					'type' => 'postback',
 					'label' => 'ดูรูป',
@@ -61,24 +133,29 @@ if (!is_null($events['events'])) {
 				];				
 				$columns = [
 					[
-					'text' => 'อ่าวนางออลซีซั่นส์/ลันตาปุรี จ.กระบี่',
-					'actions' => $actions,
+					'title' => 'อ่าวนางออลซีซั่นส์/ลันตาปุรี จ.กระบี่',
+					'text' => 'บูธ CC105 โซน C2',
+					'actions' => $actions1,
 						],
 					[
-					'text' => 'อนันต บุรินทร์ รีสอร์ท จ. กระบี่',
-					'actions' => $actions,
+					'title' => 'อนันต บุรินทร์ รีสอร์ท จ. กระบี่',
+					'text' => 'บูธ CC179 โซน C2',
+					'actions' => $actions2,
 						],
 					[
-					'text' => 'ไร่เลย์ วิวพอยท์ รีสอร์ท จ. กระบี่',
-					'actions' => $actions,
+					'title' => 'ไร่เลย์ วิวพอยท์ รีสอร์ท จ. กระบี่',
+					'text' => 'บูธ G270 โซน CG',
+					'actions' => $actions3,
 						],
 					[
-					'text' => 'โรงแรมอารีธารา รีสอร์ท กระบี่',
-					'actions' => $actions,
+					'title' => 'โรงแรมอารีธารา รีสอร์ท กระบี่',
+					'text' => 'บูธ C124 โซน C2',
+					'actions' => $actions4,
 						],
 					[
-					'text' => 'โรงแรมอาภาสรี กระบี่',
-					'actions' => $actions,
+					'title' => 'โรงแรมอาภาสรี กระบี่',
+					'text' => 'บูธ CC159 โซน C2',
+					'actions' => $actions5,
 						],
 				];				
 				$template = [
