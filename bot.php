@@ -64,16 +64,17 @@ if (!is_null($events['events'])) {
 				];
 				
 			}elseif($type=="sticker"){
-				$messages = array();
-				$messages[] = [					
+				$messages = [
+				    [
 					'type' => $type,
 					'packageId' => 2,
 					'stickerId' => 145,
-				];
-				$messages[] = [
+				    ],
+				    [
 					'type' => 'text',
 					'text' => $replytext,
-				];
+				    ]
+				];					
 				
 			}elseif($type=="image"){
 				$messages = [
