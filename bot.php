@@ -73,7 +73,7 @@ if (!is_null($events['events'])) {
 				    [
 					'type' => 'text',
 					'text' => $replytext,
-				    ]
+				    ],
 				];					
 				
 			}elseif($type=="image"){
