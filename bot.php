@@ -51,12 +51,11 @@ if (!is_null($events['events'])) {
 					[
 					'type' => 'postback',
 					'label' => 'จัดที่ไหน',
-					'data' => 'message=ไหน',
 					'text' => 'จัดที่ไหน'
 						],[
 					'type' => 'postback',
-					'label' => 'เมื่อไหร่',
-					'data' => 'message=ไหร่',
+					'label' => 'แผนผังงาน',
+					'text' => 'แผนผังงาน',
 						],[
 					'type' => 'postback',
 					'label' => 'ทำไม',
