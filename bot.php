@@ -59,19 +59,19 @@ if (!is_null($events['events'])) {
 						],[
 					'type' => 'postback',
 					'label' => 'เมื่อไหร่',
-					'data' => 'message=ไหร่',
+					'data' => 'message=ไม',
 						],[
 					'type' => 'postback',
 					'label' => 'เมื่อไหร่',
-					'data' => 'message=ไหร่',
+					'data' => 'message=ใคร',
 						],[
 					'type' => 'postback',
 					'label' => 'เมื่อไหร่',
-					'data' => 'message=ไหร่',
+					'data' => 'message=ไง',
 						],[
 					'type' => 'postback',
 					'label' => 'เมื่อไหร่',
-					'data' => 'message=ไหร่',
+					'data' => 'message=ไฮ',
 						]
 				];				
 				$template = [
