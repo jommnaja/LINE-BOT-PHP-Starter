@@ -64,11 +64,11 @@ if (!is_null($events['events'])) {
 				];
 				
 			}elseif($type=="sticker"){
-				$messages = [
+				$messages[] = [
 					'type' => 'text',
 					'text' => $replytext,
 				];	
-				$messages = [
+				$messages[] = [
 					'type' => $type,
 					'packageId' => 2,
 					'stickerId' => 145,
