@@ -45,37 +45,33 @@ if (!is_null($events['events'])) {
 					'type' => 'postback',
 					'label' => 'จัดที่ไหน',
 					'text' => 'จัดที่ไหน'
-						],
-					[
+						],[
 					'type' => 'postback',
 					'label' => 'แผนผังงาน',
-					'text' => 'แผนผังงาน'
-						],
-					[
+					'text' => 'แผนผังงาน',
+						],[
 					'type' => 'postback',
-					'label' => 'กิจกรรมวันนี้',
+					'label' => 'ทำไม',
 					'data' => 'message=ไม',
-					'text' => 'กิจกรรมวันนี้'
-						],
-					[
+						],[
 					'type' => 'uri',
-					'label' => 'TITF Facebook Fan Page',
-					'uri' => 'http://www.facebook.com/ttaatitf'
+					'label' => 'Facebook งาน',
+					'uri' => 'http://www.facebook.com/titfttaa',
 						]
 				];				
 				$template = [
 					'type' => 'buttons',
-					'text' => 'กรุณาระบุ keyword',
-					'actions' => $actions
+					'text' => 'เลือกเมนู หรือพิมพ์ keyword เพื่อค้นหาบูธในงานที่ต้องการ',
+					'actions' => $actions,
 				];				
 				$messages = [
 					'type' => $type,
-					'altText' => 'Please type keyword',
-					'template' => [$template]
+					'altText' => 'โปรดเลือกปุ่ม',
+					'template' => $template,
 				];
 				$data = [
 					'replyToken' => $replyToken,
-					'messages' => [$messages]
+					'messages' => [$messages],
 				];
 				
 			}elseif($type=="sticker"){
