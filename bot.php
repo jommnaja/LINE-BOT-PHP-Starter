@@ -68,6 +68,10 @@ if (!is_null($events['events'])) {
 					'altText' => 'โปรดเลือกปุ่ม',
 					'template' => $template,
 				];
+				$data = [
+					'replyToken' => $replyToken,
+					'messages' => [$messages],
+				];
 				
 			}elseif($type=="sticker"){
 				$messages = [
@@ -81,12 +85,20 @@ if (!is_null($events['events'])) {
 					'text' => $replytext,
 				    ],
 				];					
+				$data = [
+					'replyToken' => $replyToken,
+					'messages' => $messages,
+				];
 				
 			}elseif($type=="image"){
 				$messages = [
 					'type' => $type,
 					'originalContentUrl' => 'https://patamon.pw/orig.jpg',
 					'previewImageUrl' => 'https://patamon.pw/prev.jpg',
+				];
+				$data = [
+					'replyToken' => $replyToken,
+					'messages' => [$messages],
 				];
 				
 			}elseif($type=="location"){
@@ -97,19 +109,21 @@ if (!is_null($events['events'])) {
 					'latitude' => 13.723702,
 					'longitude' => 100.559159,
 				];
+				$data = [
+					'replyToken' => $replyToken,
+					'messages' => [$messages],
+				];
 				
 			}else{
 				$messages = [
 					'type' => 'text',
 					'text' => $replytext,
-				];	
-				
+				];					
+				$data = [
+					'replyToken' => $replyToken,
+					'messages' => [$messages],
+				];
 			}
-
-			$data = [
-				'replyToken' => $replyToken,
-				'messages' => $messages,
-			];
 			
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
