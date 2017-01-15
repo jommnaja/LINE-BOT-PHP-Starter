@@ -70,7 +70,7 @@ if (!is_null($events['events'])) {
 				$messages = [
 					'type' => $type,
 					'altText' => 'Please type keyword',
-					'template' => $template,
+					'template' => [$template],
 				];
 				$data = [
 					'replyToken' => $replyToken,
