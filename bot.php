@@ -110,14 +110,15 @@ if (!is_null($events['events'])) {
 					'address' => 'ศูนย์การประชุมแห่งชาติสิริกิติ์',
 					'latitude' => 13.723702,
 					'longitude' => 100.559159,
-						],[
+						],
+					[
 					'type' => 'text',
 					'text' => $replytext,
-						]
+						],
 				];
 				$data = [
 					'replyToken' => $replyToken,
-					'messages' => [$messages],
+					'messages' => $messages,
 				];
 				
 			}else{
