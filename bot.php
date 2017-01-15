@@ -64,14 +64,15 @@ if (!is_null($events['events'])) {
 				];
 				
 			}elseif($type=="sticker"){
-				$messages = {[
+				$messages = [
 					'type' => 'text',
 					'text' => $replytext,
-				],[
+				];
+				$messages2 = [					
 					'type' => $type,
 					'packageId' => 2,
 					'stickerId' => 145,
-				]};
+				];
 				
 			}elseif($type=="image"){
 				$messages = [
@@ -100,6 +101,7 @@ if (!is_null($events['events'])) {
 			$data = [
 				'replyToken' => $replyToken,
 				'messages' => [$messages],
+				'messages' => [$messages2],
 			];
 			
 			$post = json_encode($data);
