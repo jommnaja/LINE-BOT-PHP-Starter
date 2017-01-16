@@ -75,10 +75,12 @@ if (!is_null($events['events'])) {
 				];	
 				$columns = [
 					[
+					'thumbnailImageUrl' => 'https://patamon.pw/carousel.jpg',
 					'title' => 'อ่าวนางออลซีซั่นส์/ลันตาปุรี จ.กระบี่',
 					'text' => 'บูธ CC105 โซน C2',
 					'actions' => $actions,
 					],[
+					'thumbnailImageUrl' => 'https://patamon.pw/carousel.jpg',
 					'title' => 'อ่าวนางออลซีซั่นส์/ลันตาปุรี จ.กระบี่',
 					'text' => 'บูธ CC105 โซน C2',
 					'actions' => $actions2,
