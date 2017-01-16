@@ -1,4 +1,6 @@
 <?php
+    header('Content-Type: application/json');
+
     $replyToken = 1;
     $type = 'template';
 
