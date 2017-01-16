@@ -46,42 +46,122 @@ if (!is_null($events['events'])) {
 					'type' => 'uri',
 					'label' => 'โปรโมชั่น',
 					'uri' => 'http://www.titf-ttaa.com',
-					],[
+if($type=="carousel"){
+				$actions1 = [
+					[
+					'type' => 'uri',
+					'label' => 'โปรโมชั่น',
+					'uri' => 'http://www.titf-ttaa.com',
+						],
+					[
 					'type' => 'postback',
 					'label' => 'ดูผังบูธ',
 					'text' => 'plenary',
 					'data' => 'message=ไหร่',
-					],[
+						],
+					[
 					'type' => 'uri',
 					'label' => 'ดูรายละเอียด',
 					'uri' => 'http://www.titf-ttaa.com',
-					]
-				];					
+						]
+				];				
 				$actions2 = [
 					[
 					'type' => 'uri',
 					'label' => 'โปรโมชั่น',
 					'uri' => 'http://www.titf-ttaa.com',
-					],[
+						],
+					[
 					'type' => 'postback',
 					'label' => 'ดูผังบูธ',
 					'text' => 'plenary',
 					'data' => 'message=ไหร่',
-					],[
+						],
+					[
 					'type' => 'uri',
 					'label' => 'ดูรายละเอียด',
 					'uri' => 'http://www.titf-ttaa.com',
-					]
-				];	
+						]
+				];				
+				$actions3 = [
+					[
+					'type' => 'uri',
+					'label' => 'โปรโมชั่น',
+					'uri' => 'http://www.titf-ttaa.com',
+						],
+					[
+					'type' => 'postback',
+					'label' => 'ดูผังบูธ',
+					'text' => 'plenary',
+					'data' => 'message=ไหร่',
+						],
+					[
+					'type' => 'uri',
+					'label' => 'ดูรายละเอียด',
+					'uri' => 'http://www.titf-ttaa.com',
+						]
+				];				
+				$actions4 = [
+					[
+					'type' => 'uri',
+					'label' => 'โปรโมชั่น',
+					'uri' => 'http://www.titf-ttaa.com',
+						],
+					[
+					'type' => 'postback',
+					'label' => 'ดูผังบูธ',
+					'text' => 'plenary',
+					'data' => 'message=ไหร่',
+						],
+					[
+					'type' => 'uri',
+					'label' => 'ดูรายละเอียด',
+					'uri' => 'http://www.titf-ttaa.com',
+						]
+				];				
+				$actions5 = [
+					[
+					'type' => 'uri',
+					'label' => 'โปรโมชั่น',
+					'uri' => 'http://www.titf-ttaa.com',
+						],
+					[
+					'type' => 'postback',
+					'label' => 'ดูผังบูธ',
+					'text' => 'plenary',
+					'data' => 'message=ไหร่',
+						],
+					[
+					'type' => 'uri',
+					'label' => 'ดูรายละเอียด',
+					'uri' => 'http://www.titf-ttaa.com',
+						]
+				];				
 				$columns = [
 					[
 					'title' => 'อ่าวนางออลซีซั่นส์/ลันตาปุรี จ.กระบี่',
 					'text' => 'บูธ CC105 โซน C2',
-					'actions' => $actions,
-					],[
-					'title' => 'อ่าวนางออลซีซั่นส์/ลันตาปุรี จ.กระบี่',
-					'text' => 'บูธ CC105 โซน C2',
+					'actions' => $actions1,
+						],
+					[
+					'title' => 'อนันต บุรินทร์ รีสอร์ท จ. กระบี่',
+					'text' => 'บูธ CC179 โซน C2',
 					'actions' => $actions2,
+						],
+					[
+					'title' => 'ไร่เลย์ วิวพอยท์ รีสอร์ท จ. กระบี่',
+					'text' => 'บูธ G270 โซน CG',
+					'actions' => $actions3,
+						],
+					[
+					'title' => 'โรงแรมอารีธารา รีสอร์ท กระบี่',
+					'text' => 'บูธ C124 โซน C2',
+					'actions' => $actions4,
+						],
+					[
+					'title' => 'โรงแรมอาภาสรี กระบี่',
+					'text' => 'บูธ CC159 โซน C2',
+					'actions' => $actions5,
 					],
 				];				
 				$template = [
