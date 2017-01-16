@@ -144,7 +144,7 @@ if (!is_null($events['events'])) {
 						],
 					[
 					'text' => 'ค้นหาเพิ่มเติม',
-					'actions' => $actions5,
+					'actions' => [$actions5],
 					],
 				];				
 				$template = [
