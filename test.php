@@ -1,4 +1,7 @@
 <?php
+    $replyToken = 1;
+    $type = 'template';
+
     $actions = [
         [
         'type' => 'postback',
