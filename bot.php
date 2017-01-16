@@ -73,6 +73,54 @@ if (!is_null($events['events'])) {
 					'uri' => 'http://www.titf-ttaa.com',
 					]
 				];	
+				$actions3 = [
+					[
+					'type' => 'uri',
+					'label' => 'โปรโมชั่น',
+					'uri' => 'http://www.titf-ttaa.com',
+					],[
+					'type' => 'postback',
+					'label' => 'ดูผังบูธ',
+					'text' => 'plenary',
+					'data' => 'message=ไหร่',
+					],[
+					'type' => 'uri',
+					'label' => 'ดูรายละเอียด',
+					'uri' => 'http://www.titf-ttaa.com',
+					]
+				];	
+				$actions4 = [
+					[
+					'type' => 'uri',
+					'label' => 'โปรโมชั่น',
+					'uri' => 'http://www.titf-ttaa.com',
+					],[
+					'type' => 'postback',
+					'label' => 'ดูผังบูธ',
+					'text' => 'plenary',
+					'data' => 'message=ไหร่',
+					],[
+					'type' => 'uri',
+					'label' => 'ดูรายละเอียด',
+					'uri' => 'http://www.titf-ttaa.com',
+					]
+				];	
+				$actions5 = [
+					[
+					'type' => 'uri',
+					'label' => 'โปรโมชั่น',
+					'uri' => 'http://www.titf-ttaa.com',
+					],[
+					'type' => 'postback',
+					'label' => 'ดูผังบูธ',
+					'text' => 'plenary',
+					'data' => 'message=ไหร่',
+					],[
+					'type' => 'uri',
+					'label' => 'ดูรายละเอียด',
+					'uri' => 'http://www.titf-ttaa.com',
+					]
+				];	
 				$columns = [
 					[
 					'thumbnailImageUrl' => 'https://patamon.pw/carousel.jpg',
@@ -84,6 +132,21 @@ if (!is_null($events['events'])) {
 					'title' => 'อ่าวนางออลซีซั่นส์/ลันตาปุรี จ.กระบี่',
 					'text' => 'บูธ CC105 โซน C2',
 					'actions' => $actions2,
+					],[
+					'thumbnailImageUrl' => 'https://patamon.pw/carousel.jpg',
+					'title' => 'อ่าวนางออลซีซั่นส์/ลันตาปุรี จ.กระบี่',
+					'text' => 'บูธ CC105 โซน C2',
+					'actions' => $actions3,
+					],[
+					'thumbnailImageUrl' => 'https://patamon.pw/carousel.jpg',
+					'title' => 'อ่าวนางออลซีซั่นส์/ลันตาปุรี จ.กระบี่',
+					'text' => 'บูธ CC105 โซน C2',
+					'actions' => $actions4,
+					],[
+					'thumbnailImageUrl' => 'https://patamon.pw/carousel.jpg',
+					'title' => 'อ่าวนางออลซีซั่นส์/ลันตาปุรี จ.กระบี่',
+					'text' => 'บูธ CC105 โซน C2',
+					'actions' => $actions5,
 					],
 				];				
 				$template = [
