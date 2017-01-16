@@ -85,7 +85,7 @@ if (!is_null($events['events'])) {
 					],
 				];				
 				$template = [
-					'type' => '$type',
+					'type' => $type,
 					'columns' => $columns,
 				];				
 				$messages = [
