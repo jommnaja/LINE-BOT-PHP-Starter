@@ -2,38 +2,57 @@
     header('Content-Type: application/json');
 
     $replyToken = 1;
-    $type = 'template';
+    $type = 'carousel';
 
     $actions = [
         [
-        'type' => 'postback',
-        'label' => 'จัดที่ไหน',
-        'text' => 'จัดที่ไหน',
-        'data' => 'message=ไหน',
-            ],[
-        'type' => 'postback',
-        'label' => 'แผนผังงาน',
-        'text' => 'แผนผังงาน',
-        'data' => 'message=ไหร่',
-            ],[
-        'type' => 'postback',
-        'label' => 'กิจกรรมวันนี้',
-        'text' => 'กิจกรรมวันนี้',
-        'data' => 'message=ไหร่',
-            ],[
         'type' => 'uri',
-        'label' => 'TITF Facebook',
+        'label' => 'โปรโมชั่น',
+        'uri' => 'http://www.titf-ttaa.com',
+        ],[
+        'type' => 'postback',
+        'label' => 'ดูผังบูธ',
+        'text' => 'plenary',
         'data' => 'message=ไหร่',
-        'uri' => 'https://www.facebook.com/ttaatitf',
-            ]
+        ],[
+        'type' => 'uri',
+        'label' => 'ดูรายละเอียด',
+        'uri' => 'http://www.titf-ttaa.com',
+        ]
+    ];					
+    $actions2 = [
+        [
+        'type' => 'uri',
+        'label' => 'โปรโมชั่น',
+        'uri' => 'http://www.titf-ttaa.com',
+        ],[
+        'type' => 'postback',
+        'label' => 'ดูผังบูธ',
+        'text' => 'plenary',
+        'data' => 'message=ไหร่',
+        ],[
+        'type' => 'uri',
+        'label' => 'ดูรายละเอียด',
+        'uri' => 'http://www.titf-ttaa.com',
+        ]
+    ];	
+    $columns = [
+        [
+        'title' => 'อ่าวนางออลซีซั่นส์/ลันตาปุรี จ.กระบี่',
+        'text' => 'บูธ CC105 โซน C2',
+        'actions' => $actions,
+        ],[
+        'title' => 'อ่าวนางออลซีซั่นส์/ลันตาปุรี จ.กระบี่',
+        'text' => 'บูธ CC105 โซน C2',
+        'actions' => $actions2,
+        ],
     ];				
     $template = [
-        'type' => 'buttons',
-        'text' => 'เลือกเมนู หรือพิมพ์ keyword เพื่อค้นหาบูธในงานที่ต้องการ',
-        'actions' => $actions,
+        'type' => '$type',
+        'columns' => $columns,
     ];				
     $messages = [
-        'type' => $type,
+        'type' => 'template',
         'altText' => 'โปรดเลือกปุ่ม',
         'template' => $template,
     ];
