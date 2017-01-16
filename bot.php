@@ -41,12 +41,6 @@ if (!is_null($events['events'])) {
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			
 			if($type=="carousel"){
-				$actions = [
-					[
-					'type' => 'uri',
-					'label' => 'โปรโมชั่น',
-					'uri' => 'http://www.titf-ttaa.com',
-if($type=="carousel"){
 				$actions1 = [
 					[
 					'type' => 'uri',
