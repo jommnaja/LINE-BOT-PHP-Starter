@@ -107,18 +107,10 @@ if (!is_null($events['events'])) {
 				];	
 				$actions5 = [
 					[
-					'type' => 'uri',
-					'label' => 'โปรโมชั่น',
-					'uri' => 'http://www.titf-ttaa.com',
-					],[
 					'type' => 'postback',
-					'label' => 'ดูผังบูธ',
-					'text' => 'plenary',
+					'label' => 'ค้นหาเพิ่มเติม',
+					'text' => 'กระบี่',
 					'data' => 'message=ไหร่',
-					],[
-					'type' => 'uri',
-					'label' => 'ดูรายละเอียด',
-					'uri' => 'http://www.titf-ttaa.com',
 					]
 				];	
 				$columns = [
