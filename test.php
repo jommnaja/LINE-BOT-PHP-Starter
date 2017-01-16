@@ -48,7 +48,7 @@
         ],
     ];				
     $template = [
-        'type' => '$type',
+        'type' => $type,
         'columns' => $columns,
     ];				
     $messages = [
