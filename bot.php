@@ -106,12 +106,10 @@ if (!is_null($events['events'])) {
 					]
 				];	
 				$actions5 = [
-					[
 					'type' => 'postback',
 					'label' => 'ค้นหาเพิ่มเติม',
 					'text' => 'กระบี่',
 					'data' => 'message=ไหร่',
-					]
 				];	
 				$columns = [
 					[
