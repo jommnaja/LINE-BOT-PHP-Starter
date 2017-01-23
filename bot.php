@@ -178,10 +178,10 @@ if (!is_null($events['events'])) {
 				$messages = [
 				    [
 					'type' => $type,
-//					'packageId' => 1353176,
-//					'stickerId' => 14029217,
-					'packageId' => 1,
-					'stickerId' => 1,
+					'packageId' => 1353176,
+					'stickerId' => 14029217,
+//					'packageId' => 1,
+//					'stickerId' => 1,
 				    ],
 				    [
 					'type' => 'text',
