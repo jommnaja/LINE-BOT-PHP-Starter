@@ -20,10 +20,12 @@ if (!is_null($events['events'])) {
 			if($event['message']['stickerId']=="14029217"){
 				$type = "sticker";
 				$replytext = "สุดย่งสุดยอดอัลลาย เขิลลลล ❤️";
+				$stickerid = 107;
 				
 			}else{
 				$type = "sticker";
 				$replytext = "ง่วง";
+				$stickerid = 1;
 				
 			}
 			
@@ -185,10 +187,10 @@ if (!is_null($events['events'])) {
 				$messages = [
 				    [
 					'type' => $type,
-					'packageId' => 1353176,
-					'stickerId' => 14029217,
-//					'packageId' => 1,
-//					'stickerId' => 1,
+//					'packageId' => 1353176,
+//					'stickerId' => 14029217,
+					'packageId' => 1,
+					'stickerId' => $stickerid,
 				    ],
 				    [
 					'type' => 'text',
