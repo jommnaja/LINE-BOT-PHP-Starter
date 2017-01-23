@@ -103,12 +103,12 @@ if (!is_null($events['events'])) {
 				];	
 				$columns = [
 					[
-					'thumbnailImageUrl' => 'https://patamon.pw/abcd.jpg',
+					'thumbnailImageUrl' => 'https://patamon.pw/chatbot/demo/tn/abcd.jpg',
 					'title' => 'A B C D',
 					'text' => 'ร้านกาแฟ',
 					'actions' => $actions,
 					],[
-					'thumbnailImageUrl' => 'https://patamon.pw/bossa.jpg',
+					'thumbnailImageUrl' => 'https://patamon.pw/chatbot/demo/tn/bossa.jpg',
 					'title' => 'Bossa Cafe',
 					'text' => 'ร้านกาแฟ',
 					'actions' => $actions2,
