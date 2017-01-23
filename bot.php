@@ -16,7 +16,9 @@ if (!is_null($events['events'])) {
 			$type = "carousel";
 			
 		} elseif ($event['type'] == 'message' && $event['message']['type'] == 'sticker') {
-			$replytext = "packageid = ".$event['message']['packageId']." / stickerid = ".$event['message']['stickerId'];
+//			$replytext = "packageid = ".$event['message']['packageId']." / stickerid = ".$event['message']['stickerId'];
+			$type = "sticker";
+			$replytext = "สุดยอด ❤️";
 			
 		} elseif ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
@@ -176,8 +178,8 @@ if (!is_null($events['events'])) {
 				$messages = [
 				    [
 					'type' => $type,
-					'packageId' => 2,
-					'stickerId' => 145,
+					'packageId' => 1353176,
+					'stickerId' => 14029217,
 				    ],
 				    [
 					'type' => 'text',
