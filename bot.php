@@ -17,8 +17,15 @@ if (!is_null($events['events'])) {
 			
 		} elseif ($event['type'] == 'message' && $event['message']['type'] == 'sticker') {
 //			$replytext = "packageid = ".$event['message']['packageId']." / stickerid = ".$event['message']['stickerId'];
-			$type = "sticker";
-			$replytext = "สุดยอด ❤️";
+			if($event['message']['stickerId']=="14029217"){
+				$type = "sticker";
+				$replytext = "สุดย่งสุดยอดอัลลาย เขิลลลล ❤️";
+				
+			}else{
+				$type = "sticker";
+				$replytext = "ง่วง";
+				
+			}
 			
 		} elseif ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
