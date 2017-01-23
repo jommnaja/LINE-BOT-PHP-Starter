@@ -15,6 +15,9 @@ if (!is_null($events['events'])) {
 		if ($event['type'] == 'message' && $event['message']['type'] == 'location') {
 			$type = "carousel";
 			
+		} elseif ($event['type'] == 'message' && $event['message']['type'] == 'sticker') {
+			$replytext = "packageid = ".$event['message']['packageId']." / stickerid = ".$event['message']['stickerId'];
+			
 		} elseif ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
 			$text = $event['message']['text'];
