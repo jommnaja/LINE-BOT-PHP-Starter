@@ -9,7 +9,10 @@ if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
 		// Reply only when message sent is in 'text' format
-		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
+		if ($event['type'] == 'message' && $event['message']['type'] == 'location') {
+			$type = "carousel";
+			
+		} elseif ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
 			$text = $event['message']['text'];
 			// Get replyToken
@@ -37,6 +40,7 @@ if (!is_null($events['events'])) {
 			}else{
 				$type = "template";
 			}
+		}
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			
@@ -46,11 +50,6 @@ if (!is_null($events['events'])) {
 					'type' => 'uri',
 					'label' => 'โปรโมชั่น',
 					'uri' => 'http://www.titf-ttaa.com',
-					],[
-					'type' => 'postback',
-					'label' => 'ดูผังบูธ',
-					'text' => 'plenary',
-					'data' => 'message=ไหร่',
 					],[
 					'type' => 'uri',
 					'label' => 'ดูรายละเอียด',
@@ -63,11 +62,6 @@ if (!is_null($events['events'])) {
 					'label' => 'โปรโมชั่น',
 					'uri' => 'http://www.titf-ttaa.com',
 					],[
-					'type' => 'postback',
-					'label' => 'ดูผังบูธ',
-					'text' => 'plenary',
-					'data' => 'message=ไหร่',
-					],[
 					'type' => 'uri',
 					'label' => 'ดูรายละเอียด',
 					'uri' => 'http://www.titf-ttaa.com',
@@ -78,11 +72,6 @@ if (!is_null($events['events'])) {
 					'type' => 'uri',
 					'label' => 'โปรโมชั่น',
 					'uri' => 'http://www.titf-ttaa.com',
-					],[
-					'type' => 'postback',
-					'label' => 'ดูผังบูธ',
-					'text' => 'plenary',
-					'data' => 'message=ไหร่',
 					],[
 					'type' => 'uri',
 					'label' => 'ดูรายละเอียด',
@@ -95,26 +84,16 @@ if (!is_null($events['events'])) {
 					'label' => 'โปรโมชั่น',
 					'uri' => 'http://www.titf-ttaa.com',
 					],[
-					'type' => 'postback',
-					'label' => 'ดูผังบูธ',
-					'text' => 'plenary',
-					'data' => 'message=ไหร่',
-					],[
 					'type' => 'uri',
 					'label' => 'ดูรายละเอียด',
 					'uri' => 'http://www.titf-ttaa.com',
 					]
 				];	
-				$actions5 = [
+				$actions2 = [
 					[
 					'type' => 'uri',
 					'label' => 'โปรโมชั่น',
 					'uri' => 'http://www.titf-ttaa.com',
-					],[
-					'type' => 'postback',
-					'label' => 'ดูผังบูธ',
-					'text' => 'plenary',
-					'data' => 'message=ไหร่',
 					],[
 					'type' => 'uri',
 					'label' => 'ดูรายละเอียด',
@@ -123,30 +102,15 @@ if (!is_null($events['events'])) {
 				];	
 				$columns = [
 					[
-					'thumbnailImageUrl' => 'https://patamon.pw/carousel.jpg',
-					'title' => 'อ่าวนางออลซีซั่นส์/ลันตาปุรี จ.กระบี่',
-					'text' => 'บูธ CC105 โซน C2',
+					'thumbnailImageUrl' => 'https://patamon.pw/abcd.jpg',
+					'title' => 'A B C D',
+					'text' => 'ร้านกาแฟ',
 					'actions' => $actions,
 					],[
-					'thumbnailImageUrl' => 'https://patamon.pw/carousel.jpg',
-					'title' => 'อ่าวนางออลซีซั่นส์/ลันตาปุรี จ.กระบี่',
-					'text' => 'บูธ CC105 โซน C2',
+					'thumbnailImageUrl' => 'https://patamon.pw/bossa.jpg',
+					'title' => 'Bossa Cafe',
+					'text' => 'ร้านกาแฟ',
 					'actions' => $actions2,
-					],[
-					'thumbnailImageUrl' => 'https://patamon.pw/carousel.jpg',
-					'title' => 'อ่าวนางออลซีซั่นส์/ลันตาปุรี จ.กระบี่',
-					'text' => 'บูธ CC105 โซน C2',
-					'actions' => $actions3,
-					],[
-					'thumbnailImageUrl' => 'https://patamon.pw/carousel.jpg',
-					'title' => 'อ่าวนางออลซีซั่นส์/ลันตาปุรี จ.กระบี่',
-					'text' => 'บูธ CC105 โซน C2',
-					'actions' => $actions4,
-					],[
-					'thumbnailImageUrl' => 'https://patamon.pw/carousel.jpg',
-					'title' => 'อ่าวนางออลซีซั่นส์/ลันตาปุรี จ.กระบี่',
-					'text' => 'บูธ CC105 โซน C2',
-					'actions' => $actions5,
 					],
 				];				
 				$template = [
@@ -182,7 +146,7 @@ if (!is_null($events['events'])) {
 					'data' => 'message=ไหร่',
 						],[
 					'type' => 'uri',
-					'label' => 'TITF Facebook',
+					'label' => 'Facebook',
 					'data' => 'message=ไหร่',
 					'uri' => 'https://www.facebook.com/ttaatitf',
 						]
@@ -271,7 +235,7 @@ if (!is_null($events['events'])) {
 			$result = curl_exec($ch);
 			curl_close($ch);
 			echo $result . "\r\n";
-		}
+		
 	}
 }
 echo "OK";
