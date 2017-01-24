@@ -39,6 +39,8 @@ if (!is_null($events['events'])) {
 				$replytext = "ก็จอมน่ะสิ จะใครล่ะ";
 			}elseif(strpos($text, 'ดำน้ำ') !== false) {
 				$replytext = "คุณต้องการไปดำน้ำที่ไหน";
+			}elseif(strpos($text, 'ต่อไป') !== false) {
+				$replytext = "คันต่อไปออกจากหมอชิต 2 เวลา 10.20 น. ค่ะ";
 			}elseif(strpos($text, 'เกาะล้าน') !== false) {
 				$replytext = "มี 100 กว่าบูธ คุณต้องการดูรายชื่อเลย หรือต้องการระบุงบ";
 			}elseif(strpos($text, 'ใคร') !== false) {
